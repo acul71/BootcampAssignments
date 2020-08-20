@@ -4,6 +4,7 @@
 
 * Day 1
 **People Array Assignment**
+
 Your assignment for today is to make a copy of the Helloworld contract and make a few changes. Make sure to keep your original People contract as well, since we will continue to work on that tomorrow.
 
 Instead of having a mapping where we store people, create a new array where we can store the people. 
