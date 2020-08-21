@@ -19,4 +19,17 @@ Bonus Assignment #2 [Difficult]
 
 Create a function that returns an array of all the ID's that the msg.sender has created.
 
+* Day 2
+**Data Location Assignment**
+
+Try to solve the issue with the “updateBalance” function.
+Propose a solution to the issue.
+(There are multiple solutions.)
+
+**People Update Assignment**
+
+In today's assignment, I want you to add some extra functionality to our Helloworld contract. I want you to use the original contract that I use in the videos, not the modified one you created in the assignment yesterday.
+
+* Implement a function or functions so that the people in the mapping can update their information. Make sure to use the correct data location so that the update is saved. This function should use assert to verify that the changes have taken place.
+* Create an event called PersonUpdated that is emitted when a persons information is updated. The event should contain both the old and the updated information of the person. 
 
