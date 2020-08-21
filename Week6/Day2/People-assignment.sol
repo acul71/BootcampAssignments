@@ -27,11 +27,20 @@ contract HelloWorld{
 
     event PersonUpdated(string nameOld, uint ageOld, uint heightOld, string nameUpdated, uint ageUpdated, uint heightUpdated);
 
-    function createPerson(string memory name, uint age, uint height) public {
-        address creator = msg.sender;
+    modifier nameCantBeEmpty(string memory name) {
         bytes memory tempEmptyStringTest = bytes(name);
-
         require(tempEmptyStringTest.length > 0, "name can't be empty");
+        _;
+    }
+
+    modifier personExists {
+        bytes memory tempEmptyStringTest = bytes(people[msg.sender].name);
+        require(tempEmptyStringTest.length > 0, "Can't update: person doesn't exist");
+        _;
+    }
+
+    function createPerson(string memory name, uint age, uint height) public nameCantBeEmpty(name) {
+        address creator = msg.sender;
 
         //This creates a person
         Person memory newPerson;
@@ -47,14 +56,8 @@ contract HelloWorld{
         return (people[creator].name, people[creator].age, people[creator].height);
     }
 
-    function updatePerson(string memory name, uint age, uint height) public {
+    function updatePerson(string memory name, uint age, uint height) public nameCantBeEmpty(name) personExists {
         address creator = msg.sender;
-
-        bytes memory tempEmptyStringTest = bytes(people[creator].name);
-        require(tempEmptyStringTest.length > 0, "Can't update: person doesn't exist");
-
-        tempEmptyStringTest = bytes(name);
-        require(tempEmptyStringTest.length > 0, "name can't be empty");
 
         Person memory oldPerson;
         oldPerson = people[creator];
