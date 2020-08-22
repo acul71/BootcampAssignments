@@ -35,3 +35,12 @@ In today's assignment, I want you to add some extra functionality to our Hellowo
 * Implement a function or functions so that the people in the mapping can update their information. Make sure to use the correct data location so that the update is saved. This function should use assert to verify that the changes have taken place.
 * Create an event called PersonUpdated that is emitted when a persons information is updated. The event should contain both the old and the updated information of the person. 
 
+
+
+* ### Day 3
+
+** Destroyable **
+
+Make HelloWorld contract destroyable
+
+
