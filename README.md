@@ -39,7 +39,7 @@ In today's assignment, I want you to add some extra functionality to our Hellowo
 
 * ### Day 3
 
-** Destroyable **
+**Destroyable**
 
 Make HelloWorld contract destroyable
 
