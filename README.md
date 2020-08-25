@@ -68,3 +68,12 @@ Bonus Assignment
 * Make sure that a worker can only be fired by his/her boss. For each worker created, you need to input and save information about who (which address) is the boss. This should be implemented in the Worker contract.
 * A worker is not allowed to be his/her own boss. 
 * By implementing a new function in the base contract, used by both deletePerson and fire, make sure there is as little code duplication as possible between the deletePerson function and the fire function. 
+
+
+
+* ### Day 4
+
+**ERC20 assignment**
+
+* make basic ERC20 token contract
+
